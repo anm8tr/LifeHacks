@@ -15,6 +15,8 @@
 		58BA14A8263529C500ABF648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BA14A6263529C500ABF648 /* LaunchScreen.storyboard */; };
 		58BA14B3263529C500ABF648 /* LifeHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14B2263529C500ABF648 /* LifeHacksTests.swift */; };
 		58BA14BE263529C500ABF648 /* LifeHacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14BD263529C500ABF648 /* LifeHacksUITests.swift */; };
+		58BA14D12635307C00ABF648 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14D02635307C00ABF648 /* Model.swift */; };
+		58BA14D42635312400ABF648 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14D32635312400ABF648 /* StateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		58BA14B9263529C500ABF648 /* LifeHacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeHacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BA14BD263529C500ABF648 /* LifeHacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeHacksUITests.swift; sourceTree = "<group>"; };
 		58BA14BF263529C500ABF648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58BA14D02635307C00ABF648 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		58BA14D32635312400ABF648 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,12 @@
 		58BA149A263529C400ABF648 /* LifeHacks */ = {
 			isa = PBXGroup;
 			children = (
-				58BA149B263529C400ABF648 /* AppDelegate.swift */,
-				58BA149D263529C400ABF648 /* SceneDelegate.swift */,
-				58BA149F263529C400ABF648 /* ViewController.swift */,
-				58BA14A1263529C400ABF648 /* Main.storyboard */,
-				58BA14A4263529C500ABF648 /* Assets.xcassets */,
-				58BA14A6263529C500ABF648 /* LaunchScreen.storyboard */,
-				58BA14A9263529C500ABF648 /* Info.plist */,
+				58BA14CB26352A0B00ABF648 /* Delegates */,
+				58BA14CD26352A3800ABF648 /* Story Boards */,
+				58BA14D22635308000ABF648 /* Models */,
+				58BA14CC26352A1E00ABF648 /* View Controllers */,
+				58BA14CE26352A4A00ABF648 /* Resources */,
+				58BA14CF26352A5200ABF648 /* Supporting Files */,
 			);
 			path = LifeHacks;
 			sourceTree = "<group>";
@@ -126,6 +129,57 @@
 				58BA14BF263529C500ABF648 /* Info.plist */,
 			);
 			path = LifeHacksUITests;
+			sourceTree = "<group>";
+		};
+		58BA14CB26352A0B00ABF648 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				58BA149B263529C400ABF648 /* AppDelegate.swift */,
+				58BA149D263529C400ABF648 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		58BA14CC26352A1E00ABF648 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58BA149F263529C400ABF648 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		58BA14CD26352A3800ABF648 /* Story Boards */ = {
+			isa = PBXGroup;
+			children = (
+				58BA14A1263529C400ABF648 /* Main.storyboard */,
+				58BA14A6263529C500ABF648 /* LaunchScreen.storyboard */,
+			);
+			path = "Story Boards";
+			sourceTree = "<group>";
+		};
+		58BA14CE26352A4A00ABF648 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58BA14A4263529C500ABF648 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		58BA14CF26352A5200ABF648 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58BA14A9263529C500ABF648 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58BA14D22635308000ABF648 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58BA14D32635312400ABF648 /* StateController.swift */,
+				58BA14D02635307C00ABF648 /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +315,8 @@
 				58BA14A0263529C400ABF648 /* ViewController.swift in Sources */,
 				58BA149C263529C400ABF648 /* AppDelegate.swift in Sources */,
 				58BA149E263529C400ABF648 /* SceneDelegate.swift in Sources */,
+				58BA14D12635307C00ABF648 /* Model.swift in Sources */,
+				58BA14D42635312400ABF648 /* StateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27EL9WB63;
-				INFOPLIST_FILE = LifeHacks/Info.plist;
+				INFOPLIST_FILE = "LifeHacks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27EL9WB63;
-				INFOPLIST_FILE = LifeHacks/Info.plist;
+				INFOPLIST_FILE = "LifeHacks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
