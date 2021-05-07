@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zML-GQ-33Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Question View Controller-->
+        <!--Top Questions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="LifeHacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,6 +117,7 @@
                         </constraints>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Top Questions" image="Questions" id="WdQ-Uq-c4t"/>
                     <connections>
                         <outlet property="bodyLabel" destination="fNT-Ca-JWy" id="eWQ-6w-Y4e"/>
                         <outlet property="ownerImageView" destination="V22-M9-LgI" id="eJN-h1-aBc"/>
@@ -127,10 +128,185 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="93.75"/>
+            <point key="canvasLocation" x="1055" y="-173"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="I9I-TY-mAh">
+            <objects>
+                <viewController id="snD-Il-HJO" customClass="EditProfileViewController" customModule="LifeHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="glR-X3-9oj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LH-Bh-V2t" userLabel="Name Text Field" customClass="RoundTextField" customModule="LifeHacks" customModuleProvider="target">
+                                <rect key="frame" x="24" y="79" width="366" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iDw-e2-m68"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-ZI-cgU" userLabel="About Me Text View" customClass="RoundTextView" customModule="LifeHacks" customModuleProvider="target">
+                                <rect key="frame" x="24" y="133" width="366" height="148"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="3xe-r1-6f0"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-tO-Vll">
+                                <rect key="frame" x="24" y="24" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="snD-Il-HJO" eventType="touchUpInside" id="bV7-dn-HCM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS2-G9-I45">
+                                <rect key="frame" x="356" y="24" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="snD-Il-HJO" eventType="touchUpInside" id="ALW-eg-tdq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VrK-Aw-DRd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NS2-G9-I45" firstAttribute="top" secondItem="VrK-Aw-DRd" secondAttribute="top" constant="24" id="6jv-Xl-F66"/>
+                            <constraint firstItem="2LH-Bh-V2t" firstAttribute="trailing" secondItem="glR-X3-9oj" secondAttribute="trailingMargin" id="FRL-BJ-0nj"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G1e-tO-Vll" secondAttribute="trailingMargin" id="JvK-Fe-SLx"/>
+                            <constraint firstItem="2LH-Bh-V2t" firstAttribute="leading" secondItem="glR-X3-9oj" secondAttribute="leadingMargin" id="KGO-a3-qub"/>
+                            <constraint firstItem="G1e-tO-Vll" firstAttribute="leading" secondItem="glR-X3-9oj" secondAttribute="leadingMargin" id="LWm-wi-flS"/>
+                            <constraint firstItem="RDQ-ZI-cgU" firstAttribute="top" secondItem="2LH-Bh-V2t" secondAttribute="bottom" constant="24" id="R0A-rR-1mr"/>
+                            <constraint firstItem="G1e-tO-Vll" firstAttribute="top" secondItem="glR-X3-9oj" secondAttribute="topMargin" id="bcH-AM-Ne0"/>
+                            <constraint firstItem="2LH-Bh-V2t" firstAttribute="top" secondItem="G1e-tO-Vll" secondAttribute="bottom" constant="25" id="itl-pJ-751"/>
+                            <constraint firstItem="RDQ-ZI-cgU" firstAttribute="trailing" secondItem="glR-X3-9oj" secondAttribute="trailingMargin" id="lW9-A0-kEM"/>
+                            <constraint firstItem="RDQ-ZI-cgU" firstAttribute="leading" secondItem="glR-X3-9oj" secondAttribute="leadingMargin" id="ngq-67-xU5"/>
+                            <constraint firstItem="VrK-Aw-DRd" firstAttribute="trailing" secondItem="NS2-G9-I45" secondAttribute="trailing" constant="24" id="ov0-6d-lbE"/>
+                            <constraint firstItem="NS2-G9-I45" firstAttribute="leading" secondItem="G1e-tO-Vll" secondAttribute="trailing" constant="284" id="qAo-mq-eaX"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutMeTextView" destination="RDQ-ZI-cgU" id="y6l-iB-Pd4"/>
+                        <outlet property="nameTextField" destination="2LH-Bh-V2t" id="vbj-H0-Mcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZG-5L-oua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881.1594202898552" y="480.80357142857139"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="v3h-hi-iVt">
+            <objects>
+                <viewController id="BnE-jo-iAc" customClass="ProfileViewController" customModule="LifeHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mI-QJ-0HP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-VQ-oTT">
+                                <rect key="frame" x="24" y="236" width="366" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QJ-LF-amd">
+                                <rect key="frame" x="24" y="273" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="Gray Chateau"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA2-ag-ern">
+                                <rect key="frame" x="24" y="316.5" width="366" height="117"/>
+                                <string key="text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together. This improvement upon the original usage was introduced by no less a man than Stubb, in order to afford the imperilled harpooneer the strongest possible guarantee for the faithfulness and vigilance of his monkey-rope holder.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="Cloud Burst"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1v3-ig-Hrd" customClass="RoundImageView" customModule="LifeHacks" customModuleProvider="target">
+                                <rect key="frame" x="135" y="68" width="144" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="Nco-Y3-4wg"/>
+                                    <constraint firstAttribute="height" constant="144" id="eNL-G8-tOR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-Hq-wev">
+                                <rect key="frame" x="356" y="44" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="snD-Il-HJO" kind="presentation" id="ifO-Fv-Giz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bso-2l-1VJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IA2-ag-ern" firstAttribute="top" secondItem="2QJ-LF-amd" secondAttribute="bottom" constant="24" id="06A-U7-Gt4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IA2-ag-ern" secondAttribute="trailing" id="4lN-aI-CnW"/>
+                            <constraint firstItem="1v3-ig-Hrd" firstAttribute="top" secondItem="4mI-QJ-0HP" secondAttribute="topMargin" id="FaM-u4-vd2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zP4-VQ-oTT" secondAttribute="trailing" id="KG5-n3-bKe"/>
+                            <constraint firstItem="iU5-Hq-wev" firstAttribute="top" secondItem="bso-2l-1VJ" secondAttribute="top" id="L6g-mb-rAh"/>
+                            <constraint firstItem="zP4-VQ-oTT" firstAttribute="top" secondItem="1v3-ig-Hrd" secondAttribute="bottom" constant="24" id="N4b-Ld-QhI"/>
+                            <constraint firstItem="IA2-ag-ern" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="Nla-cV-zd9"/>
+                            <constraint firstItem="1v3-ig-Hrd" firstAttribute="centerX" secondItem="4mI-QJ-0HP" secondAttribute="centerX" id="Q6c-3o-m1a"/>
+                            <constraint firstItem="iU5-Hq-wev" firstAttribute="leading" secondItem="1v3-ig-Hrd" secondAttribute="trailing" constant="77" id="RJP-Us-U2a"/>
+                            <constraint firstItem="2QJ-LF-amd" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="WUv-HC-y4F"/>
+                            <constraint firstItem="bso-2l-1VJ" firstAttribute="trailing" secondItem="iU5-Hq-wev" secondAttribute="trailing" constant="28" id="fKk-8s-Efd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2QJ-LF-amd" secondAttribute="trailingMargin" id="fzC-gc-g6g"/>
+                            <constraint firstItem="zP4-VQ-oTT" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="gSY-fJ-dCd"/>
+                            <constraint firstItem="iU5-Hq-wev" firstAttribute="top" secondItem="bso-2l-1VJ" secondAttribute="top" id="h3G-2S-eGS"/>
+                            <constraint firstItem="2QJ-LF-amd" firstAttribute="top" secondItem="zP4-VQ-oTT" secondAttribute="bottom" constant="8" id="pky-h3-qOI"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="OjI-pz-8RS"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="IA2-ag-ern" id="kwP-CC-2Mw"/>
+                        <outlet property="nameLabel" destination="zP4-VQ-oTT" id="GXV-6v-kbg"/>
+                        <outlet property="profilePictureImageView" destination="1v3-ig-Hrd" id="Ba6-wj-MAr"/>
+                        <outlet property="reputationLabel" destination="2QJ-LF-amd" id="rnl-s6-ZRq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffI-b2-lS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="481"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aLt-ZQ-S4l">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zML-GQ-33Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3eO-ir-lz5">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Wedgewood"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BnE-jo-iAc" kind="relationship" relationship="viewControllers" id="jqf-Yi-J9S"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MKX-BV-O1X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYe-ld-QM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="89.732142857142847"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="2LH-Bh-V2t">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
         <designable name="V22-M9-LgI">
             <size key="intrinsicContentSize" width="144" height="144"/>
         </designable>
@@ -139,12 +315,20 @@
         <image name="Arrow down" width="24" height="24"/>
         <image name="Arrow up" width="24" height="24"/>
         <image name="Avatar" width="144" height="144"/>
+        <image name="Profile" width="30" height="30"/>
+        <image name="Questions" width="30" height="30"/>
         <namedColor name="Cloud Burst">
-            <color red="0.12156862745098039" green="0.18431372549019609" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12200000137090683" green="0.18400000035762787" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray Chateau">
+            <color red="0.63499999046325684" green="0.67100000381469727" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Wedgewood">
-            <color red="0.30196078431372547" green="0.46274509803921571" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.30199998617172241" green="0.46299999952316284" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

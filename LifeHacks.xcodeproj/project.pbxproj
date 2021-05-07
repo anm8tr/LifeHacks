@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582553E7263FADED000CA6AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582553E6263FADED000CA6AA /* ProfileViewController.swift */; };
+		582553E92640E6CC000CA6AA /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582553E82640E6CC000CA6AA /* EditProfileViewController.swift */; };
 		58BA149C263529C400ABF648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA149B263529C400ABF648 /* AppDelegate.swift */; };
 		58BA149E263529C400ABF648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA149D263529C400ABF648 /* SceneDelegate.swift */; };
 		58BA14A0263529C400ABF648 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA149F263529C400ABF648 /* QuestionViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		582553E6263FADED000CA6AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		582553E82640E6CC000CA6AA /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		58BA1498263529C400ABF648 /* LifeHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BA149B263529C400ABF648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58BA149D263529C400ABF648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				58BA149F263529C400ABF648 /* QuestionViewController.swift */,
+				582553E6263FADED000CA6AA /* ProfileViewController.swift */,
+				582553E82640E6CC000CA6AA /* EditProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -331,10 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582553E92640E6CC000CA6AA /* EditProfileViewController.swift in Sources */,
 				58BA14A0263529C400ABF648 /* QuestionViewController.swift in Sources */,
 				58BA149C263529C400ABF648 /* AppDelegate.swift in Sources */,
 				58BA149E263529C400ABF648 /* SceneDelegate.swift in Sources */,
 				58BA14D12635307C00ABF648 /* Model.swift in Sources */,
+				582553E7263FADED000CA6AA /* ProfileViewController.swift in Sources */,
 				58BA14D42635312400ABF648 /* StateController.swift in Sources */,
 				58BA14D8263E463C00ABF648 /* RoundImageView.swift in Sources */,
 			);
