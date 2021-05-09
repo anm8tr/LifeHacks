@@ -29,7 +29,8 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? EditProfileViewController {
+        if let navigationController = segue.destination as? UINavigationController,
+           let destination = navigationController.viewControllers.first as? EditProfileViewController {
             destination.stateController = stateController
         }
     }
