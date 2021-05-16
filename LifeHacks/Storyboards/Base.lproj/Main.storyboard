@@ -182,8 +182,16 @@
                         <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                     </view>
                     <navigationItem key="navigationItem" id="ws8-Z0-meO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cga-ce-V82"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="v6K-sN-8hX"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cga-ce-V82">
+                            <connections>
+                                <action selector="cancel:" destination="snD-Il-HJO" id="93o-IT-l82"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="v6K-sN-8hX">
+                            <connections>
+                                <action selector="save:" destination="snD-Il-HJO" id="Kcu-sO-wkk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutMeTextView" destination="RDQ-ZI-cgU" id="y6l-iB-Pd4"/>
@@ -236,13 +244,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU5-Hq-wev">
-                                <rect key="frame" x="356" y="88" width="30" height="30"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <segue destination="V60-iK-aPT" kind="presentation" id="ifO-Fv-Giz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bso-2l-1VJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -251,21 +252,23 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IA2-ag-ern" secondAttribute="trailing" id="4lN-aI-CnW"/>
                             <constraint firstItem="1v3-ig-Hrd" firstAttribute="top" secondItem="4mI-QJ-0HP" secondAttribute="topMargin" id="FaM-u4-vd2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zP4-VQ-oTT" secondAttribute="trailing" id="KG5-n3-bKe"/>
-                            <constraint firstItem="iU5-Hq-wev" firstAttribute="top" secondItem="bso-2l-1VJ" secondAttribute="top" id="L6g-mb-rAh"/>
                             <constraint firstItem="zP4-VQ-oTT" firstAttribute="top" secondItem="1v3-ig-Hrd" secondAttribute="bottom" constant="24" id="N4b-Ld-QhI"/>
                             <constraint firstItem="IA2-ag-ern" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="Nla-cV-zd9"/>
                             <constraint firstItem="1v3-ig-Hrd" firstAttribute="centerX" secondItem="4mI-QJ-0HP" secondAttribute="centerX" id="Q6c-3o-m1a"/>
-                            <constraint firstItem="iU5-Hq-wev" firstAttribute="leading" secondItem="1v3-ig-Hrd" secondAttribute="trailing" constant="77" id="RJP-Us-U2a"/>
                             <constraint firstItem="2QJ-LF-amd" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="WUv-HC-y4F"/>
-                            <constraint firstItem="bso-2l-1VJ" firstAttribute="trailing" secondItem="iU5-Hq-wev" secondAttribute="trailing" constant="28" id="fKk-8s-Efd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2QJ-LF-amd" secondAttribute="trailingMargin" id="fzC-gc-g6g"/>
                             <constraint firstItem="zP4-VQ-oTT" firstAttribute="leading" secondItem="4mI-QJ-0HP" secondAttribute="leadingMargin" id="gSY-fJ-dCd"/>
-                            <constraint firstItem="iU5-Hq-wev" firstAttribute="top" secondItem="bso-2l-1VJ" secondAttribute="top" id="h3G-2S-eGS"/>
                             <constraint firstItem="2QJ-LF-amd" firstAttribute="top" secondItem="zP4-VQ-oTT" secondAttribute="bottom" constant="8" id="pky-h3-qOI"/>
                         </constraints>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XME-fn-ad5"/>
+                    <navigationItem key="navigationItem" id="XME-fn-ad5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="CUy-kI-bwD">
+                            <connections>
+                                <segue destination="V60-iK-aPT" kind="presentation" id="cE1-Ks-7Yo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="aboutMeLabel" destination="IA2-ag-ern" id="kwP-CC-2Mw"/>
                         <outlet property="nameLabel" destination="zP4-VQ-oTT" id="GXV-6v-kbg"/>
@@ -277,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1964" y="563"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="aLt-ZQ-S4l">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zML-GQ-33Z" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zML-GQ-33Z" customClass="MainTabBarController" customModule="LifeHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3eO-ir-lz5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, Stateful {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
@@ -15,35 +15,44 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var ownerImageView: UIImageView!
     @IBOutlet weak var ownerNameLabel: UILabel!
     
-    private let stateController = StateController()
+    var stateController: StateController?
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let question = stateController.question
+        guard let question = stateController?.question else {
+            return
+        }
         titleLabel.text = question.title
         bodyLabel.text = question.body
-        scoreLabel.text = "\(question.score)"
+        updateScore(for: question)
         let owner = question.owner
         ownerImageView.image = UIImage(named: owner.profileImage)
         ownerNameLabel.text = owner.name
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let profileViewController = segue.destination as? ProfileViewController {
+            passState(to: profileViewController)
+            profileViewController.user = stateController?.question.owner
+        }
+    }
 
-    @IBAction func voteUp(_ sender: Any) {
-        stateController.question.voteUp()
-        updateScore(for: stateController.question)
+    @IBAction func voteUp(_ sender: AnyObject) {
+        stateController?.question.voteUp()
+        updateScore(for: stateController?.question)
         
     }
     
-    @IBAction func voteDown(_ sender: Any) {
-        stateController.question.voteDown()
-        updateScore(for: stateController.question)
+    @IBAction func voteDown(_ sender: AnyObject) {
+        stateController?.question.voteDown()
+        updateScore(for: stateController?.question)
     }
     
-    private func updateScore(for question: Question) {
-        scoreLabel.text = "\(question.score)"
+    private func updateScore(for question: Question?) {
+        scoreLabel.text = "\(question?.score ?? 0)"
     }
     
     

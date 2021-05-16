@@ -20,6 +20,8 @@
 		58BA14D12635307C00ABF648 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14D02635307C00ABF648 /* Model.swift */; };
 		58BA14D42635312400ABF648 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14D32635312400ABF648 /* StateController.swift */; };
 		58BA14D8263E463C00ABF648 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA14D7263E463C00ABF648 /* RoundImageView.swift */; };
+		58FC07542647694800BB24C3 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC07532647694800BB24C3 /* Stateful.swift */; };
+		58FC0756264874B400BB24C3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC0755264874B400BB24C3 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		58BA14D02635307C00ABF648 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		58BA14D32635312400ABF648 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		58BA14D7263E463C00ABF648 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		58FC07532647694800BB24C3 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
+		58FC0755264874B400BB24C3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		58BA149A263529C400ABF648 /* LifeHacks */ = {
 			isa = PBXGroup;
 			children = (
+				58FC07522647693100BB24C3 /* Protocols */,
 				58BA14D6263E461E00ABF648 /* Custom Views */,
 				58BA14CB26352A0B00ABF648 /* Delegates */,
 				58BA14D22635308000ABF648 /* Models */,
@@ -154,6 +159,7 @@
 				58BA149F263529C400ABF648 /* QuestionViewController.swift */,
 				582553E6263FADED000CA6AA /* ProfileViewController.swift */,
 				582553E82640E6CC000CA6AA /* EditProfileViewController.swift */,
+				58FC0755264874B400BB24C3 /* MainTabBarController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +211,14 @@
 				58BA14D7263E463C00ABF648 /* RoundImageView.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		58FC07522647693100BB24C3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				58FC07532647694800BB24C3 /* Stateful.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,8 +353,10 @@
 			files = (
 				582553E92640E6CC000CA6AA /* EditProfileViewController.swift in Sources */,
 				58BA14A0263529C400ABF648 /* QuestionViewController.swift in Sources */,
+				58FC0756264874B400BB24C3 /* MainTabBarController.swift in Sources */,
 				58BA149C263529C400ABF648 /* AppDelegate.swift in Sources */,
 				58BA149E263529C400ABF648 /* SceneDelegate.swift in Sources */,
+				58FC07542647694800BB24C3 /* Stateful.swift in Sources */,
 				58BA14D12635307C00ABF648 /* Model.swift in Sources */,
 				582553E7263FADED000CA6AA /* ProfileViewController.swift in Sources */,
 				58BA14D42635312400ABF648 /* StateController.swift in Sources */,

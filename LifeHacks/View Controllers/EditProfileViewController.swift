@@ -7,10 +7,10 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController, Stateful {
     
-    @IBOutlet weak var nameTextField: RoundTextField!
-    @IBOutlet weak var aboutMeTextView: RoundTextView!
+    @IBOutlet weak var nameTextField: UITextView!
+    @IBOutlet weak var aboutMeTextView: UITextField!
     
     var stateController: StateController?
     
@@ -24,7 +24,8 @@ class EditProfileViewController: UIViewController {
         
     }
     
-    @IBAction func save(_ sender: UIButton) {
+    
+    @IBAction func save(_ sender: UIBarButtonItem) {
         if let stateController = stateController, let name = nameTextField.text, let aboutMe =
             aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
             let oldUser = stateController.user
@@ -32,7 +33,7 @@ class EditProfileViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         } else {
             let title = "Missing name or about me"
-            let message = "Both name and about me need to be present t be able to save your editing"
+            let message = "Both name and about me need to be present to be able to save your editing"
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(cancelAction)
@@ -42,7 +43,7 @@ class EditProfileViewController: UIViewController {
         
     }
     
-    @IBAction func cancel(_ sender: UIButton) {
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
