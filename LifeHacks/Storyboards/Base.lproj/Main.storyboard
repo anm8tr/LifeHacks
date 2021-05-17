@@ -145,7 +145,7 @@
             <objects>
                 <viewController id="snD-Il-HJO" customClass="EditProfileViewController" customModule="LifeHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glR-X3-9oj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LH-Bh-V2t" userLabel="Name Text Field" customClass="RoundTextField" customModule="LifeHacks" customModuleProvider="target">
